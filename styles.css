@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design with Flexbox & Grid</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Responsive Web Layout</h1>
+        <p style="text-align: center;">This page demonstrates responsive design using Flexbox, CSS Grid, and media queries.</p>
+
+        <!-- Flexbox Section -->
+        <h2>Flexbox Layout</h2>
+        <div class="flex-container">
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+            <div class="flex-item">Flex Item 4</div>
+            <div class="flex-item">Flex Item 5</div>
+            <div class="flex-item">Flex Item 6</div>
+        </div>
+
+        <!-- CSS Grid Section -->
+        <h2>CSS Grid Layout</h2>
+        <div class="grid-container">
+            <div class="grid-item">Grid Item 1</div>
+            <div class="grid-item">Grid Item 2</div>
+            <div class="grid-item">Grid Item 3</div>
+            <div class="grid-item">Grid Item 4</div>
+            <div class="grid-item">Grid Item 5</div>
+            <div class="grid-item">Grid Item 6</div>
+            <div class="grid-item">Grid Item 7</div>
+            <div class="grid-item">Grid Item 8</div>
+        </div>
+    </div>
+
+</body>
+</html>

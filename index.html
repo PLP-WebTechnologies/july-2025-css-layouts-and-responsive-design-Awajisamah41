@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design with Flexbox & Grid</title>
+    <!-- Internal CSS for the responsive layout -->
+    <style>
+        /* --- General and Typography Styles --- */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 40px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        /* --- Flexbox Section --- */
+        .flex-container {
+            display: flex; /* Enables Flexbox layout for direct children */
+            flex-direction: column; /* Stacks items vertically on small screens */
+            gap: 20px; /* Adds space between flex items */
+        }
+
+        .flex-item {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* --- CSS Grid Section --- */
+        .grid-container {
+            display: grid; /* Enables CSS Grid layout */
+            gap: 20px; /* Adds space between grid cells */
+            grid-template-columns: 1fr; /* Single column on small screens */
+        }
+
+        .grid-item {
+            background-color: #e9e9e9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+
+        /* Styles for medium-sized screens (tablets) */
+        @media (min-width: 601px) {
+            .flex-container {
+                flex-direction: row; /* Changes flex items to be in a row */
+                flex-wrap: wrap; /* Allows items to wrap to a new line */
+                justify-content: space-between; /* Distributes items with space between them */
+            }
+
+            .flex-item {
+                flex-basis: calc(50% - 10px); /* Sets each item to take up half the container width with a gap */
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
+            }
+        }
+
+        /* Styles for large screens (desktops) */
+        @media (min-width: 900px) {
+            .flex-item {
+                flex-basis: calc(33.333% - 14px); /* Sets each item to take up a third of the container width */
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(4, 1fr); /* Creates four columns of equal width */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Responsive Web Layout</h1>
+        <p style="text-align: center;">This page demonstrates responsive design using Flexbox, CSS Grid, and media queries.</p>
+
+        <!-- Flexbox Section -->
+        <h2>Flexbox Layout</h2>
+        <div class="flex-container">
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+            <div class="flex-item">Flex Item 4</div>
+            <div class="flex-item">Flex Item 5</div>
+            <div class="flex-item">Flex Item 6</div>
+        </div>
+
+        <!-- CSS Grid Section -->
+        <h2>CSS Grid Layout</h2>
+        <div class="grid-container">
+            <div class="grid-item">Grid Item 1</div>
+            <div class="grid-item">Grid Item 2</div>
+            <div class="grid-item">Grid Item 3</div>
+            <div class="grid-item">Grid Item 4</div>
+            <div class="grid-item">Grid Item 5</div>
+            <div class="grid-item">Grid Item 6</div>
+            <div class="grid-item">Grid Item 7</div>
+            <div class="grid-item">Grid Item 8</div>
+        </div>
+    </div>
+
+</body>
+</html>
